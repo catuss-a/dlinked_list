@@ -18,12 +18,10 @@ void		*dllist_push_front(void **head, void *elem)
   t_dllist	*walker = *(t_dllist**)head;
   t_dllist	*dll_elem = (t_dllist*)elem;
 
-  if (dll_elem != NULL)
+  if (dll_elem != NULL && walker != NULL)
     {
-      if (walker == NULL)
-	return (*(t_dllist**)head = dll_elem);
       dllist_next(dll_elem) = walker;
       dllist_prev(walker) = dll_elem;
     }
-  return elem;
+  return (*(t_dllist**)head = dll_elem);
 }

@@ -32,6 +32,7 @@ void		*dllist_get_head(void *elem);
 void		*dllist_get_tail(void *elem);
 void		dllist_foreach_elem(void **head, void *arg,
 				    void (*func)(void **h, void *elem, void *arg));
-
+void		*dllist_delete_elem(void **head, void *arg,
+				    void (*func)(void *arg));
 
 #endif

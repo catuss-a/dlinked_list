@@ -22,8 +22,9 @@ SRCS		=	dllist_calloc.c			\
 			dllist_get_head.c		\
 			dllist_get_tail.c		\
 			dllist_foreach_elem.c		\
+			dllist_delete_elem.c		\
 			dllist_malloc_push_front.c	\
-			dllist_malloc_push_front.c	
+			dllist_malloc_push_back.c	
 
 ## RULES
 $(NAME)		:	$(OBJS)
